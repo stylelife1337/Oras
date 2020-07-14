@@ -30,6 +30,9 @@ namespace ProjectWebApi.Entities
 
         public int Pret { get; set; }
 
+        [Required]
+        public Guid OrasId { get; set; }
+
         [ForeignKey("OrasId")]
 
         public virtual Oras Oras { get; set; }

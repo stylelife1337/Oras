@@ -18,13 +18,16 @@ namespace ProjectWebApi.Entities
         [MaxLength(1500)]
         public string Description { get; set; }
 
+        [Required]
+        public Guid TaraId { get; set; }
+
+      
+
         [ForeignKey("TaraId")]
 
         public virtual Tara Tara { get; set; }
 
-        [ForeignKey("CazareId")]
-
-        public virtual Cazare Cazare { get; set; }
+       
 
         public bool? Deleted { get; set; }
 
