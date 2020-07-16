@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace ProjectWebApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("user")]
     [ApiController]
     public class UserController : ControllerBase
     {
