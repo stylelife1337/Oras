@@ -20,7 +20,7 @@ namespace ProjectWebApi.Entities
         [Required]
         public string Password { get; set; }
 
-        public bool isAdmin { get; set; }
+        public bool IsAdmin { get; set; }
 
         public bool? Deleted { get; set; }
 

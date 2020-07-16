@@ -8,9 +8,9 @@ namespace ProjectWebApi.Services.Repositories
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
-        private BooksContext _context;
+        private AtractieContext _context;
 
-        public Repository(BooksContext context)
+        public Repository(AtractieContext context)
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }

@@ -8,9 +8,9 @@ namespace ProjectWebApi.Services.Repositories
 {
     public class UserRepository : Repository<User>, IUserRepository
     {
-        private readonly BooksContext _context;
+        private readonly AtractieContext _context;
 
-        public UserRepository(BooksContext context) : base(context)
+        public UserRepository(AtractieContext context) : base(context)
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
