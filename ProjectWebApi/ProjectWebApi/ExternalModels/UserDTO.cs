@@ -1,28 +1,19 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 
-namespace ProjectWebApi.Entities
+namespace ProjectWebApi.ExternalModels
 {
-    public class User
+    public class UserDTO
     {
-        [Key]
-
         public Guid Id { get; set; }
-        [MaxLength(150)]
+
         public string FirstName { get; set; }
-        [MaxLength(150)]
+
         public string LastName { get; set; }
-        [Required]
+
         public string Email { get; set; }
-        [Required]
+
         public string Password { get; set; }
 
         public bool IsAdmin { get; set; }
-
-        public bool? Deleted { get; set; }
-
-
-
-
     }
 }

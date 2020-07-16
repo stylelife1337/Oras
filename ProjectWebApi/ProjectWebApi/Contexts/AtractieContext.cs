@@ -1,9 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ProjectWebApi.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ProjectWebApi.Contexts
 {
@@ -25,7 +21,7 @@ namespace ProjectWebApi.Contexts
         public DbSet<Oras> Cities { get; set; }
 
 
-            
+
 
     }
 }

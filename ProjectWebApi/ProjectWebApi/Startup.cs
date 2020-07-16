@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -10,6 +7,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ProjectWebApi.Contexts;
+using ProjectWebApi.Services.Repositories;
+using ProjectWebApi.Services.UnitsOfWork;
+using System;
 
 namespace ProjectWebApi
 {
@@ -28,6 +28,14 @@ namespace ProjectWebApi
         {
             var connectionString = Configuration["ConnectionStrings:AttractionsDBConnectionString"];
             services.AddDbContext<AtractieContext>(o => o.UseSqlServer(connectionString));
+
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUserUnitOfWork, UserUnitOfWork>();
+
+            services.AddControllers();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
