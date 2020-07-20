@@ -30,6 +30,7 @@ namespace ProjectWebApi
             services.AddDbContext<AtractieContext>(o => o.UseSqlServer(connectionString));
 
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IAtractieRepository, AtractieRepository>();
             services.AddScoped<IUserUnitOfWork, UserUnitOfWork>();
 
             services.AddControllers();
