@@ -17,7 +17,7 @@ namespace ProjectWebApi.Services.Repositories
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
-        public Tara GetBookDetails(Guid TaraId)
+        public Tara GetTaraDetails(Guid TaraId)
         {
             return _context.Countries
                 .Where(co => co.Id == TaraId && (co.Deleted == false || co.Deleted == null))

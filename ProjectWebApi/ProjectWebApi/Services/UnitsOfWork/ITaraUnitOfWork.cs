@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace ProjectWebApi.Services.UnitsOfWork
 {
-    public interface IOrasUnitOfWork : IDisposable
+    public interface ITaraUnitOfWork : IDisposable
     {
-        IOrasRepository Cities { get; }
-
         ITaraRepository Countries { get; }
 
-        int Complete();
+   
 
+        int Complete();
     }
 }

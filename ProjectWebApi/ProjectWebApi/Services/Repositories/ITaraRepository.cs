@@ -9,6 +9,7 @@ namespace ProjectWebApi.Services.Repositories
     public interface ITaraRepository : IRepository<Tara>
     {
 
+        Tara GetTaraDetails(Guid TaraId);
 
     }
 }

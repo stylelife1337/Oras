@@ -32,6 +32,16 @@ namespace ProjectWebApi
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IAtractieRepository, AtractieRepository>();
             services.AddScoped<IUserUnitOfWork, UserUnitOfWork>();
+            services.AddScoped<ICazareRepository, CazareRepository>();
+            services.AddScoped<IOrasRepository, OrasRepository>();
+            services.AddScoped<ITaraRepository, TaraRepository>();
+            services.AddScoped<IAtractieUnitOfWork, AtractieUnitOfWork>();
+            services.AddScoped<IOrasUnitOfWork, OrasUnitOfWork>();
+            services.AddScoped<ITaraUnitOfWork, TaraUnitOfWork>();
+            services.AddScoped<ICazareUnitOfWork, CazareUnitOfWork>();
+
+
+
 
             services.AddControllers();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
